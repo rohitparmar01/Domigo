@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --color-primary: #2372AD;
+  --color-secondary: #00C9FF;
+  --color-accent: #FFCC00;
+}
+
+.btn-primary{
+  background: var(--color-primary);
+  color: white;
+  border-radius: 14px;
+}
+
+.btn-accent{
+  background: var(--color-accent);
+  color: black;
+  border-radius: 12px;
+}
+
+.rounded-hero{
+  border-radius: 1.25rem;
+}
+
+/* small helpers */
+.card-shape{ border-radius: 1rem; box-shadow: 0 8px 20px rgba(0,0,0,0.08);} 
+
+html{ scroll-behavior: smooth }
