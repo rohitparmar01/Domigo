@@ -16,7 +16,7 @@ export default function App(){
       <div className="pt-0" />
       <Hero onPrimary={openForm} />
 
-      <main className="space-y-8">
+      <main className="space-y-8 pb-24 md:pb-0">
         <Sections.Trust onPrimary={openForm} />
         <Sections.RepeatingText />
         <Sections.WhatIsTrial onPrimary={openForm} />
@@ -34,7 +34,7 @@ export default function App(){
         <Sections.FAQ onPrimary={openForm} />
       </main>
 
-      <StickyFooter />
+      <StickyFooter onPrimary={openForm} />
       <WhatsAppFloat />
     </div>
   )

@@ -10,7 +10,7 @@ export default function WhatsAppFloat(){
       href={`https://wa.me/${whatsappNumber}${encodedMsg ? `?text=${encodedMsg}` : ''}`}
       target="_blank"
       rel="noreferrer"
-      className="fixed right-6 bottom-6 md:bottom-20 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-3"
+      className="fixed right-6 bottom-24 md:bottom-20 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-3"
       animate={{ y: [0, -8, 8, 0] }}
       transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
     >

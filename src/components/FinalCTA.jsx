@@ -30,9 +30,9 @@ export default function FinalCTA(){
         <input value={form.dogBreed} onChange={e=>setForm({...form,dogBreed:e.target.value})} placeholder="Dog's breed" className="p-3 rounded-2xl border" />
         <textarea value={form.message} onChange={e=>setForm({...form,message:e.target.value})} placeholder="A quick note" className="p-3 rounded-2xl border md:col-span-2" />
 
-        <div className="md:col-span-2 flex gap-3 items-center">
-          <motion.button whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }} type="submit" className="px-6 py-3 btn-primary shadow-md" style={{boxShadow:'0 8px 24px rgba(255,204,0,0.12)'}}>Book Free Daycare Trial</motion.button>
-          <motion.a whileHover={{ scale:1.03 }} href="#" className="px-4 py-3 bg-white rounded-2xl">Talk to Our Team</motion.a>
+        <div className="md:col-span-2 flex flex-col gap-3 items-stretch sm:items-center sm:flex-row">
+          <motion.button whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }} type="submit" className="w-full sm:w-auto px-6 py-3 btn-primary shadow-md text-center" style={{boxShadow:'0 8px 24px rgba(255,204,0,0.12)'}}>Book Free Daycare Trial</motion.button>
+          <motion.a whileHover={{ scale:1.03 }} href="#" className="w-full sm:w-auto px-4 py-3 bg-white rounded-2xl text-center">Talk to Our Team</motion.a>
         </div>
         <div className="md:col-span-2 text-sm text-black/60">✔ No commitment required &nbsp; ✔ First visit exclusive &nbsp; ✔ Limited trial slots per day</div>
       </form>

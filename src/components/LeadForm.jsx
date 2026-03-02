@@ -28,9 +28,9 @@ export default function LeadForm({ onSuccess }){
         <input placeholder="Dog's breed" value={form.dogBreed} onChange={e=>setForm({...form,dogBreed:e.target.value})} className="p-4 text-lg rounded-2xl border" />
         <textarea placeholder="A note" value={form.message} onChange={e=>setForm({...form,message:e.target.value})} className="p-4 text-lg rounded-2xl border md:col-span-2" />
       </div>
-      <div className="mt-6 flex items-center gap-3">
-        <motion.button whileHover={{scale:1.08}} whileTap={{scale:0.95}} className="px-7 py-4 text-lg btn-primary rounded-2xl">Request Free Trial</motion.button>
-        <div className="text-base text-black/60">✔ No commitment required &nbsp; ✔ First visit exclusive</div>
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <motion.button whileHover={{scale:1.08}} whileTap={{scale:0.95}} className="w-full sm:w-auto px-7 py-4 text-lg btn-primary rounded-2xl text-center">Request Free Trial</motion.button>
+        <div className="text-base text-black/60 whitespace-nowrap">✔ No commitment required &nbsp; ✔ First visit exclusive</div>
       </div>
       {status === 'done' && <div className="mt-4 text-lg text-green-600">Thanks — we’ll be in touch soon.</div>}
       {status === 'error' && <div className="mt-4 text-lg text-red-600">Something went wrong. Try again later.</div>}

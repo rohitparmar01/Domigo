@@ -26,9 +26,9 @@ export default function Hero({ onPrimary }){
             <p className="mt-4 text-lg text-black/80">Few hours apart today. Stress-free boarding tomorrow.</p>
             <p className="mt-4 text-sm text-black/70">Because boarding shouldn’t feel like being left behind. It should feel like coming back to a familiar place.</p>
 
-            <div className="mt-8 flex gap-4">
-              <motion.button whileHover={{ scale: 1.04, y: -4 }} onClick={onPrimary} className="px-6 py-3 btn-primary font-medium rounded-2xl shadow-lg">Book Free Trial</motion.button>
-              <motion.button whileHover={{ scale: 1.03 }} className="px-4 py-3 bg-white/90 text-black rounded-2xl">Schedule a Visit First</motion.button>
+            <div className="mt-8 flex flex-col gap-3 w-full sm:flex-row sm:w-auto">
+              <motion.button whileHover={{ scale: 1.04, y: -4 }} onClick={onPrimary} className="w-full sm:w-auto px-6 py-3 btn-primary font-medium rounded-2xl shadow-lg text-center">Book Free Trial</motion.button>
+              <motion.button whileHover={{ scale: 1.03 }} className="w-full sm:w-auto px-4 py-3 bg-white/90 text-black rounded-2xl text-center">Schedule a Visit First</motion.button>
             </div>
             <p className="mt-3 text-sm text-black/60">✔ No commitment required ✔ First visit exclusive ✔ Limited trial slots per day</p>
           </div>
