@@ -8,7 +8,7 @@ export default function Hero({ onPrimary }){
   const [index, setIndex] = useState(0)
 
   useEffect(()=>{
-    const t = setInterval(()=> setIndex(i => (i+1) % images.length), 4000)
+    const t = setInterval(()=> setIndex(i => (i+1) % images.length), 3000)
     return ()=> clearInterval(t)
   },[])
   return (
@@ -50,6 +50,17 @@ export default function Hero({ onPrimary }){
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.8, ease: 'easeOut' }}
+                  onError={(e)=>{
+                    // Fallback to a known public image if the slider image 404s on deployment
+                    try{
+                      const el = e.currentTarget
+                      if(!el) return
+                      const src = el.getAttribute('src') || ''
+                      if(src.toLowerCase().includes('slider3')){
+                        el.src = '/image3.jpg'
+                      }
+                    }catch(err){/* ignore */}
+                  }}
                 />
               </AnimatePresence>
 
