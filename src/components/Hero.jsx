@@ -5,7 +5,7 @@ const reveal = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }
 
 export default function Hero({ onPrimary }){
   // Use the two approved public images only
-  const images = ['/slider1.jpg','/slider2.jpeg',"/slider4.JPG"];
+  const images = ['/slider1.jpg','/slider2.jpeg',"/slider3.JPG"];
   const [index, setIndex] = useState(0)
 
   useEffect(()=>{
