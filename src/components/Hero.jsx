@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 const reveal = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }
 
 export default function Hero({ onPrimary }){
-  // Use `image3.jpg` (present in `public`) instead of `slider3.JPG` to avoid deploy 404s
-  const images = ['/slider1.jpg','/slider2.jpeg','/slider4.JPG']
+  // Use the two approved public images only
+  const images = ['/slider1.jpg','/slider2.jpeg',"/slider4.JPG"];
   const [index, setIndex] = useState(0)
 
   useEffect(()=>{
