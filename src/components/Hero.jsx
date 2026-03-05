@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 const reveal = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }
 
 export default function Hero({ onPrimary }){
-  const images = ['/slider1.jpg','/slider2.jpeg','/slider3.JPG']
+  // Use `image3.jpg` (present in `public`) instead of `slider3.JPG` to avoid deploy 404s
+  const images = ['/slider1.jpg','/slider2.jpeg','/slider4.JPG']
   const [index, setIndex] = useState(0)
 
   useEffect(()=>{
@@ -50,17 +51,6 @@ export default function Hero({ onPrimary }){
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.8, ease: 'easeOut' }}
-                  onError={(e)=>{
-                    // Fallback to a known public image if the slider image 404s on deployment
-                    try{
-                      const el = e.currentTarget
-                      if(!el) return
-                      const src = el.getAttribute('src') || ''
-                      if(src.toLowerCase().includes('slider3')){
-                        el.src = '/image3.jpg'
-                      }
-                    }catch(err){/* ignore */}
-                  }}
                 />
               </AnimatePresence>
 
