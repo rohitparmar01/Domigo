@@ -8,7 +8,7 @@ import * as Sections from './components/Sections'
 
 export default function App(){
   const contactRef = useRef()
-  function openForm(){ contactRef.current?.scrollIntoView({behavior:'smooth', block:'center'}) }
+  function openForm(){ contactRef.current?.scrollIntoView({behavior:'auto', block:'center'}) }
 
   return (
     <div className="min-h-screen text-black font-quicksand">

@@ -9,7 +9,7 @@ export default function Navbar({ onPrimary }){
     setMenuOpen(false)
     if (href.startsWith('#')) {
       const el = document.querySelector(href)
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      if (el) el.scrollIntoView({ behavior: 'auto', block: 'start' })
     }
   }
 
@@ -27,13 +27,14 @@ export default function Navbar({ onPrimary }){
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <img src="/logo.png" alt="Domigo logo" className="h-16 md:h-20 w-auto object-contain" style={{ transform: 'rotate(90deg) scale(1.6)' }} />
+            <img src="/logo.png" alt="Domigo logo" className="h-16 md:h-20 w-auto object-contain logo-brand" style={{ transform: 'rotate(90deg) scale(1.6)' }} />
           </motion.div>
 
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6">
               <motion.a 
                 href="#what-happens" 
+                onClick={(e)=>{e.preventDefault();handleNavClick('#what-happens')}}
                 className="text-black/70 hover:text-lagoon transition-colors duration-300"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -42,6 +43,7 @@ export default function Navbar({ onPrimary }){
               </motion.a>
               <motion.a 
                 href="#faq" 
+                onClick={(e)=>{e.preventDefault();handleNavClick('#faq')}}
                 className="text-black/70 hover:text-lagoon transition-colors duration-300"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -50,6 +52,7 @@ export default function Navbar({ onPrimary }){
               </motion.a>
               <motion.a 
                 href="#contact" 
+                onClick={(e)=>{e.preventDefault();handleNavClick('#contact')}}
                 className="text-black/70 hover:text-lagoon transition-colors duration-300"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const reveal = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }
 
 export default function Hero({ onPrimary }){
-  const images = ['/slider2.jpg','/slider3.jpg','/section.jpg']
+  const images = ['/slider1.jpg','/slider2.jpeg','/slider3.JPG']
   const [index, setIndex] = useState(0)
 
   useEffect(()=>{
@@ -30,7 +30,11 @@ export default function Hero({ onPrimary }){
               <motion.button whileHover={{ scale: 1.04, y: -4 }} onClick={onPrimary} className="w-full sm:w-auto px-6 py-3 btn-primary font-medium rounded-2xl shadow-lg text-center">Book Free Trial</motion.button>
               <motion.button whileHover={{ scale: 1.03 }} className="w-full sm:w-auto px-4 py-3 bg-white/90 text-black rounded-2xl text-center">Schedule a Visit First</motion.button>
             </div>
-            <p className="mt-3 text-sm text-black/60">✔ No commitment required ✔ First visit exclusive ✔ Limited trial slots per day</p>
+            <p className="mt-3 text-sm text-black/60">
+              <span className="paw-check"></span>No commitment required 
+              <span className="paw-check ml-2"></span>First visit exclusive 
+              <span className="paw-check ml-2"></span>Limited trial slots per day
+            </p>
           </div>
 
           <div className="flex justify-center md:justify-end">

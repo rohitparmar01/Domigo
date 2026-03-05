@@ -146,7 +146,7 @@ export default function FinalCTA(){
           >
             Book Free Daycare Trial
           </motion.button>
-          <motion.a 
+          {/* <motion.a 
             whileHover={{ 
               scale: 1.03,
               y: -2,
@@ -158,7 +158,7 @@ export default function FinalCTA(){
             className="w-full sm:w-auto px-4 py-3 bg-white rounded-2xl text-center border border-gray-200"
           >
             Talk to Our Team
-          </motion.a>
+          </motion.a> */}
         </motion.div>
         <motion.div 
           variants={itemVariants}

@@ -80,22 +80,23 @@ export function WhatIsTrial({ onPrimary }){
       <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         <motion.div 
           variants={reveal}
-          className="w-full h-64 md:h-80 lg:h-96 flex items-center justify-center bg-[#FFD12A] rounded-3xl overflow-hidden"
+          className="w-full max-w-[420px] md:max-w-[560px] lg:max-w-[640px] h-[320px] md:h-[400px] lg:h-[480px] flex items-center justify-center bg-[#FFD12A] rounded-3xl overflow-hidden"
+          style={{ width: '100%' }}
         >
           <motion.img
             custom={0}
-            src="/section.jpg"
+            src="/image2.jpg"
             alt="daycare dog"
-            className="h-full w-auto object-cover"
-            style={{ maxWidth: '100%' }}
-            whileHover={{ scale: 1.05 }}
+            className="w-full h-full object-cover object-center"
+            variants={{ hidden: { opacity: 1 }, visible: { opacity: 1 } }}
+            whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.4 }}
           />
         </motion.div>
         <div>
           <motion.h3 variants={reveal} className="text-3xl md:text-4xl font-bold text-lagoon mb-2" style={{ fontFamily: 'Quicksand, sans-serif' }}>What is the Free Daycare Trial?</motion.h3>
           <motion.p variants={reveal} className="mt-2 text-lg md:text-xl text-black/80" style={{ fontFamily: 'Quicksand, sans-serif', lineHeight: '1.7' }}>A 3–5 hour daytime stay designed to help your dog:</motion.p>
-          <motion.ul variants={reveal} className="mt-3 space-y-1 text-lg md:text-xl text-black/80 list-disc pl-5" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+          <motion.ul variants={reveal} className="mt-3 space-y-2 text-lg md:text-xl text-black/80 list-paw" style={{ fontFamily: 'Quicksand, sans-serif' }}>
             <li>Get comfortable in our environment</li>
             <li>Build trust with our caregivers</li>
             <li>Socialise with compatible dogs/Packs</li>
@@ -290,10 +291,10 @@ export function Emotional({ onPrimary }){
         </div>
         <motion.div 
           variants={reveal}
-          className="w-full h-56 md:h-64 lg:h-72 flex items-center justify-center"
+          className="w-full h-[320px] md:h-[400px] lg:h-[480px] flex items-center justify-center"
         >
           <motion.img 
-            src="/slider3.jpg" 
+            src="/image3.jpg" 
             alt="calm dog" 
             className="w-full h-full object-cover rounded-3xl shadow-xl" 
             whileHover={{ scale: 1.03 }}
@@ -383,7 +384,7 @@ export function WhoShouldBook({ onPrimary }){
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <img src="/slider2.jpg" alt="trial dog" className="w-full h-64 md:h-80 object-cover rounded-2xl" />
+          <img src="/image1.jpg" alt="trial dog" className="w-full h-64 md:h-80 object-cover rounded-2xl" />
         </motion.div>
         <div className="flex flex-col items-center p-6 md:p-10">
           <motion.h3 
@@ -395,13 +396,13 @@ export function WhoShouldBook({ onPrimary }){
           </motion.h3>
           <motion.ul 
             variants={reveal}
-            className="mb-8 space-y-3 text-lg md:text-xl text-black/80 max-w-xl" 
+            className="mb-8 space-y-3 text-lg md:text-xl text-black/80 max-w-xl list-paw" 
             style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-            <li className="list-disc ml-6">Your dog has never stayed at boarding before</li>
-            <li className="list-disc ml-6">Your dog gets anxious in new places</li>
-            <li className="list-disc ml-6">You're planning travel soon</li>
-            <li className="list-disc ml-6">You want to test comfort before boarding</li>
+            <li>Your dog has never stayed at boarding before</li>
+            <li>Your dog gets anxious in new places</li>
+            <li>You're planning travel soon</li>
+            <li>You want to test comfort before boarding</li>
           </motion.ul>
           <motion.button 
             variants={reveal}
